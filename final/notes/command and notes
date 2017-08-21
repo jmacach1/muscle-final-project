@@ -1,0 +1,20 @@
+//Running Muscle with test01.fa as input file with Protein seqs
+// output is a clw (clustal format) text file test01.clw
+
+$ muscle -in test01.fa -clwout test01.clw
+
+
+// How to run cmd in Python.
+https://stackoverflow.com/questions/6945466/using-python-to-run-another-program
+
+https://stackoverflow.com/questions/89228/calling-an-external-command-in-python
+>>>>>>>>>
+import subprocess
+
+cmd = ['/Users/me/src/program', file_1, file_2]
+process = subprocess.Popen(cmd, stdout=subprocess.PIPE)
+for line in process.stdout:
+     print(line)
+>>>>>>>>>>>>
+
+

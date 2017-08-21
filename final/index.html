@@ -1,0 +1,62 @@
+<!doctype html>
+<html class="no-js" lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>MUSCLE Final Project</title>
+        <!--[if IE]>                                                                                       
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>                 
+        <![endif]-->
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+
+
+</head>
+
+<body>
+    <div class="intro">
+        <h1> Final Project: MUSCLE</h1>
+        <p>Muscle is a program for creating multiple alignments <br> of amino acid or nucleotide sequences.</p>
+        <hr>
+    </div>
+
+    <!-- MUSCLE submission Area: Submit Protein Seqs in inputTextArea 
+    and sumbit button goes to ./muscle.cgi -->
+    <form name="faa_seq_input" method='post' action="./muscle.cgi">
+        <p class="instructions">Place your FASTA protein sequences in the box below.</p>
+        <textarea id='inputTextArea' name="inputTextArea" cols="80" rows="11"></textarea>
+        <br>
+        <input type="submit" value="Submit to MUSCLE">
+    </form>
+    
+    <!-- Database Accessor Area: Get sequences from Database, Save sequences to Database -->
+    <form name="getFaaSeqDB">
+        <p class="instructions"> Choose a Sequence from Database.</p>
+        <div class="ui-widget">
+            <input name="search_term" type="search" value="" 
+id="search_term" autofocus="autofocus" placeholder="Search for a Sequence" /> 
+            <input type="submit" id="button3" value="Fetch Sequence">
+        </div>
+    </form>
+        <textarea name="dbTextArea" id="dbTextArea" cols="80" rows="5"></textarea>
+        <br>
+        <input type="button" id="button1" value="Add To Query">
+        <input type="button" id="button2" value="Save Sequence">
+
+   
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+</body>
+
+</html>
